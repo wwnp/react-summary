@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Clicker } from "../components/Clicker";
-import { Timer } from "../components/Timer";
+import { Timer } from "../components/Timer/Timer";
+// useState
 export const Home = (props) => {
   const [isClicker, setIsClicker] = useState(false);
   const [testCnt, setTestCnt] = useState(0);
@@ -18,7 +19,7 @@ export const Home = (props) => {
       {/* Timer (interval,timer,ref) */}
       {/* problem in CSB:localstorage */}
       <hr />
-      {/* <div><Timer></Timer></div>  */}
+      <div><Timer></Timer></div>
 
       {/* Multiple add setTestCnt  */}
       <hr />
@@ -40,4 +41,4 @@ export const Home = (props) => {
     </div>
   );
 };
-// useEffect === componentDidMount + componentDidUpdate + componetnWillUnmoount
+

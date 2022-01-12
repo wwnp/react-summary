@@ -6,25 +6,44 @@ import { About } from "./containers/About.jsx";
 import { TimerClass } from "./containers/TimerClass.jsx";
 import { FormClassPage } from "./containers/FormClassPage.jsx";
 import { SearchPage } from "./containers/SearchPage/SearchPage.jsx";
+import { UseState } from "./containers/hooks/UseState.jsx";
+import { UseEffect } from "./containers/hooks/UseEffect.jsx";
+import { Contex } from "./containers/hooks/Context.jsx";
+import { WithContex } from "./containers/hooks/WithContex.jsx";
 export const App = (props) => {
-  console.log(props);
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/class" element={<HomeClass />}></Route>
-        <Route path="/timer" element={<TimerClass />}></Route>
-        <Route path="/formclasspage" element={<FormClassPage />}></Route>
-        <Route
-          path="/hook-search-logic-inside"
-          element={<SearchPage />}
-        ></Route>
-        <Route
-          path="/hook-search-logic-outside"
-          element={<SearchPage />}
-        ></Route>
-      </Route>
-    </Routes>
+    <Contex>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/class" element={<HomeClass />}></Route>
+          <Route path="/timer" element={<TimerClass />}></Route>
+          <Route path="/formclasspage" element={<FormClassPage />}></Route>
+          <Route
+            path="/hook-search-logic-inside"
+            element={<SearchPage />}
+          ></Route>
+          <Route
+            path="/hook-search-logic-outside"
+            element={<SearchPage />}
+          ></Route>
+          <Route
+            path="/usestate"
+            element={<UseState />}
+          ></Route>
+          <Route
+            path="/useeffect"
+            element={<UseEffect />}
+          ></Route>
+          <Route
+            path="/withcontex"
+            element={<WithContex />}
+          ></Route>
+        </Route>
+      </Routes>
+    </Contex>
   );
 };
+// useState - Home.jsx
+// useEffect useState - LogicTimer.jsx

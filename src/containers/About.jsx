@@ -1,3 +1,8 @@
-export const About = (props) => {
-  return null;
-};
+import React from 'react'
+export const About = props => {
+  return (
+    <div >
+      
+    </div>
+  )
+}
