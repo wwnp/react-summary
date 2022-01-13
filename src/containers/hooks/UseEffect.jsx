@@ -3,7 +3,6 @@ import { useState } from 'react'
 // import somePlugin from 'plugin'
 export const UseEffect = props => {
   const [count, setCount] = useState(0)
-
   // -----------mount---------------
   // [what effect do]
   useEffect(() => {
@@ -44,8 +43,6 @@ export const UseEffect = props => {
   // -----------update---------------
   useEffect(() => {
   }, [count])
-
-
 
   return (
     <div >

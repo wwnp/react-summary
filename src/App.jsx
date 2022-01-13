@@ -6,44 +6,38 @@ import { About } from "./containers/About.jsx";
 import { TimerClass } from "./containers/TimerClass.jsx";
 import { FormClassPage } from "./containers/FormClassPage.jsx";
 import { SearchPage } from "./containers/SearchPage/SearchPage.jsx";
+import { NotFound } from "./containers/NotFound.jsx";
 import { UseState } from "./containers/hooks/UseState.jsx";
 import { UseEffect } from "./containers/hooks/UseEffect.jsx";
 import { Contex } from "./containers/hooks/Context.jsx";
 import { WithContex } from "./containers/hooks/WithContex.jsx";
+import { UseLayoutEffect } from "./containers/hooks/UseLayoutEffect.jsx";
+import { UseCallback } from "./containers/hooks/UseCallback.jsx";
+import { UseImperativeHandle } from "./containers/hooks/UseImperativeHandle.jsx";
 export const App = (props) => {
   return (
     <Contex>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/class" element={<HomeClass />}></Route>
-          <Route path="/timer" element={<TimerClass />}></Route>
-          <Route path="/formclasspage" element={<FormClassPage />}></Route>
-          <Route
-            path="/hook-search-logic-inside"
-            element={<SearchPage />}
-          ></Route>
-          <Route
-            path="/hook-search-logic-outside"
-            element={<SearchPage />}
-          ></Route>
-          <Route
-            path="/usestate"
-            element={<UseState />}
-          ></Route>
-          <Route
-            path="/useeffect"
-            element={<UseEffect />}
-          ></Route>
-          <Route
-            path="/withcontex"
-            element={<WithContex />}
-          ></Route>
+          <Route index element={<Home />}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="class" element={<HomeClass />}></Route>
+          <Route path="timer" element={<TimerClass />}></Route>
+          <Route path="formclasspage" element={<FormClassPage />}></Route>
+          <Route path="hook-search-logic-outside" element={<SearchPage />} ></Route>
+          <Route path="hooks">
+            <Route path="useState" element={<UseState />}></Route>
+            <Route path="useEffect" element={<UseEffect />} ></Route>
+            <Route path="withContex" element={<WithContex />} ></Route>
+            <Route path="useLayoutEffect" element={<UseLayoutEffect />} ></Route>
+            <Route path="useCallback" element={<UseCallback />}></Route>
+            <Route path="useImperativeHandle" element={<UseImperativeHandle />} ></Route>
+            <Route path="useReducer" element={<h1>useReducer</h1>} ></Route>
+          </Route>
         </Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
-    </Contex>
-  );
+    </Contex>);
 };
 // useState - Home.jsx
 // useEffect useState - LogicTimer.jsx

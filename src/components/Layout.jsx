@@ -11,24 +11,49 @@ export const Layout = (props) => {
   return (
     <div className="Layout">
       <ul id="dropdown1" className="dropdown-content">
-        <li className={isActive(location.pathname, '/usestate')}>
-          <NavLink to="/usestate">
+        <li className={isActive(location.pathname, '/useState')}>
+          <NavLink to="/hooks/useState">
             usestate
           </NavLink>
         </li>
-        <li className={isActive(location.pathname, '/useeffect')}>
-          <NavLink to="/useeffect">
+        <li className={isActive(location.pathname, '/useEffect')}>
+          <NavLink to="/hooks/useEffect">
             useeffect
           </NavLink>
         </li>
-        <li className={isActive(location.pathname, '/useref')}>
-          <NavLink to="/useref">
+        <li className={isActive(location.pathname, '/useRef')}>
+          <NavLink to="/hooks/useRef">
             useref
           </NavLink>
         </li>
-        <li className={isActive(location.pathname, '/withcontex')}>
-          <NavLink to="/withcontex">
+        <li className={isActive(location.pathname, '/withContex')}>
+          <NavLink to="/hooks/withContex">
             withcontex
+          </NavLink>
+        </li>
+        <li className={isActive(location.pathname, '/useLayoutEffect')}>
+          <NavLink to="/hooks/useLayoutEffect">
+            uselayouteffect
+          </NavLink>
+        </li>
+        <li className={isActive(location.pathname, '/useCallback')}>
+          <NavLink to="/hooks/useCallback">
+            usecallback
+          </NavLink>
+        </li>
+        <li className={isActive(location.pathname, '/useMemo')}>
+          <NavLink to="/hooks/useMemo">
+            usememo
+          </NavLink>
+        </li>
+        <li className={isActive(location.pathname, '/useImperativeHandle')}>
+          <NavLink to="/hooks/useImperativeHandle">
+            useimperativehandle
+          </NavLink>
+        </li>
+        <li className={isActive(location.pathname, '/useReducer')}>
+          <NavLink to="/hooks/useReducer">
+            usereducer
           </NavLink>
         </li>
       </ul>

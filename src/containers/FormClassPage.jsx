@@ -46,7 +46,6 @@ export class FormClassPage extends React.Component {
   // --------------
   validateName = () => {
     if (this.state.firstName.length < 5) {
-      console.log("sd more than 5");
     }
   };
   validateEmail = () => {
@@ -218,7 +217,6 @@ export class FormClassPage extends React.Component {
   }
   // --------------
   formCardSubmit = (e) => {
-    console.log(this.cardRef.current);
     e.preventDefault();
     if (this.cardRef.current.value.length < 16) {
       alert("this.cardRef.current.value.length < 16");
@@ -234,7 +232,6 @@ export class FormClassPage extends React.Component {
   };
   validateForm = (event) => {
     event.preventDefault();
-    console.log(this.state.emailTask);
     if (!validateEmail(this.state.emailTask)) {
       alert("incorrect email");
       return;

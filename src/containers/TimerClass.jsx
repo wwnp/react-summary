@@ -54,7 +54,6 @@ export class TimerClass extends React.Component {
     clearInterval(this.interval);
   }
   resetHandler() {
-    // console.log(localStorage.getItem("currSec"));
     clearInterval(this.interval);
     this.setState({
       currentSecond: 0,

@@ -14,7 +14,7 @@ export const UseState = props => {
     setState({ ...state, isCounting: !state.isCounting })
   }
   useEffect(() => {
-    console.log(state)
+    // console.log(state)
   }, [state]) // update
 
   // ^ like in stateful comps this.state = {...}
