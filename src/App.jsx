@@ -14,6 +14,7 @@ import { WithContex } from "./containers/hooks/WithContex.jsx";
 import { UseLayoutEffect } from "./containers/hooks/UseLayoutEffect.jsx";
 import { UseCallback } from "./containers/hooks/UseCallback.jsx";
 import { UseImperativeHandle } from "./containers/hooks/UseImperativeHandle.jsx";
+import { UseReducer } from "./containers/hooks/UseReducer.jsx";
 export const App = (props) => {
   return (
     <Contex>
@@ -32,7 +33,7 @@ export const App = (props) => {
             <Route path="useLayoutEffect" element={<UseLayoutEffect />} ></Route>
             <Route path="useCallback" element={<UseCallback />}></Route>
             <Route path="useImperativeHandle" element={<UseImperativeHandle />} ></Route>
-            <Route path="useReducer" element={<h1>useReducer</h1>} ></Route>
+            <Route path="useReducer" element={<UseReducer />} ></Route>
           </Route>
         </Route>
         <Route path="*" element={<NotFound />}></Route>

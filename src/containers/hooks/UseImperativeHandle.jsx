@@ -1,6 +1,7 @@
 import React, { useState, useRef, useImperativeHandle } from "react";
-// change directions props
+// change directions props from boo
 // transfert props up
+// создать некую функциональность в дочернем элементе и передать ее наверх
 export const UseImperativeHandle = () => {
   const [card, setCard] = useState("");
   const [phone, setPhone] = useState("");
@@ -57,7 +58,6 @@ export const UseImperativeHandle = () => {
 const TextInput = React.forwardRef((props, ref) => {
   const { hasError, placeholder, value, update } = props;
   const inputRef = useRef();
-
   useImperativeHandle(ref, () => {
     return {
       focus() {
