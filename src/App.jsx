@@ -15,6 +15,8 @@ import { UseLayoutEffect } from "./containers/hooks/UseLayoutEffect.jsx";
 import { UseCallback } from "./containers/hooks/UseCallback.jsx";
 import { UseImperativeHandle } from "./containers/hooks/UseImperativeHandle.jsx";
 import { UseReducer } from "./containers/hooks/UseReducer.jsx";
+import { UseCustomHook } from "./containers/hooks/UseCustomHook.jsx";
+import { UseRouterHooks } from "./containers/hooks/UseRouterHooks.jsx";
 export const App = (props) => {
   return (
     <Contex>
@@ -34,9 +36,11 @@ export const App = (props) => {
             <Route path="useCallback" element={<UseCallback />}></Route>
             <Route path="useImperativeHandle" element={<UseImperativeHandle />} ></Route>
             <Route path="useReducer" element={<UseReducer />} ></Route>
+            <Route path="useCustomHook" element={<UseCustomHook />} ></Route>
+            <Route path="useRouterHooks/:slug" element={<UseRouterHooks />} ></Route>
           </Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Route>
-        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </Contex>);
 };

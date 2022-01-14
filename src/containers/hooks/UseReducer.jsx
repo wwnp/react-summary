@@ -12,6 +12,7 @@ const reducer = (state, action) => {
 }
 export const UseReducer = props => {
   const [state, dispatch] = useReducer(reducer, { count: 0 })
+  console.log(state)
   return (
     <div >
       {state.count}
