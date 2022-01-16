@@ -17,6 +17,7 @@ import { UseImperativeHandle } from "./containers/hooks/UseImperativeHandle.jsx"
 import { UseReducer } from "./containers/hooks/UseReducer.jsx";
 import { UseCustomHook } from "./containers/hooks/UseCustomHook.jsx";
 import { UseRouterHooks } from "./containers/hooks/UseRouterHooks.jsx";
+import {Test} from './containers/Test'
 export const App = (props) => {
   return (
     <Contex>
@@ -28,6 +29,7 @@ export const App = (props) => {
           <Route path="timer" element={<TimerClass />}></Route>
           <Route path="formclasspage" element={<FormClassPage />}></Route>
           <Route path="hook-search-logic-outside" element={<SearchPage />} ></Route>
+          <Route path="test" element={<Test />} ></Route>
           <Route path="hooks">
             <Route path="useState" element={<UseState />}></Route>
             <Route path="useEffect" element={<UseEffect />} ></Route>

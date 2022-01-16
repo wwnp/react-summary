@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 // useState useEffect
-export const LogicTimer = props => {
+function setInitialValue() {
+  const counter = localStorage.getItem('counter')
+  return counter ? +counter : 0
+}
+export const useTimer = props => {
   const [count, setCount] = useState(setInitialValue())
   const [isCounting, setIsCounting] = useState(false)
   const timerIdRef = useRef(null)
@@ -13,10 +17,11 @@ export const LogicTimer = props => {
   useEffect(() => {
     isCounting
       ?
-      timerIdRef.current = setInterval(() => {
-        setCount(prevCount => prevCount + 1)
-      }, 1000) :
-      null
+        timerIdRef.current = setInterval(() => {
+          setCount(prevCount => prevCount + 1)
+        }, 1000)
+      :
+        null
     return () => {
       timerIdRef.current && clearInterval(timerIdRef.current)
       timerIdRef.current ?
@@ -35,10 +40,5 @@ export const LogicTimer = props => {
     setIsCounting,
     handleReset
   }
-}
-
-function setInitialValue() {
-  const counter = localStorage.getItem('counter')
-  return counter ? +counter : 0
 }
 // useEffect === componentDidMount + componentDidUpdate + componetnWillUnmoount

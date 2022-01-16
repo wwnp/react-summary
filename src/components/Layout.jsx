@@ -73,6 +73,16 @@ export const Layout = (props) => {
             useRouterHooks
           </NavLink>
         </li>
+        <li className={isActive(location.pathname, '/useCustomHook')}>
+          <NavLink to="/hooks/useCustomHook">
+            useCustomHook
+          </NavLink>
+        </li>
+        <li className={isActive(location.pathname, '/test')}>
+          <NavLink to="/test">
+            Test
+          </NavLink>
+        </li>
       </ul>
       <nav>
         <div className="nav-wrapper">
